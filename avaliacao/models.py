@@ -6,6 +6,7 @@ class Avaliacao(models.Model):
 
     avaliador = models.ForeignKey(Usuario, on_delete=models.CASCADE, related_name='avaliacoes_feitas', verbose_name="Avaliador")
     projeto = models.ForeignKey(Projeto, on_delete=models.CASCADE, related_name='avaliacoes', verbose_name="Projeto")
+    barema = models.ForeignKey('barema.Barema', on_delete=models.CASCADE, related_name='avaliacoes', verbose_name="Barema")
     comentario = models.TextField(blank=True, null=True, verbose_name="Feedback")
     data_avaliacao = models.DateTimeField(auto_now_add=True, verbose_name="Data da Avaliação")
 

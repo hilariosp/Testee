@@ -9,7 +9,7 @@ urlpatterns = [
     path('projeto/', include('projeto.urls')),
     path('usuario/', include('usuario.urls')),
     path('tag/', include('tag.urls')),
-    # path('criterio/', include('criterio.urls')),
+    path('criterio/', include('criterio.urls')),
     # path('avaliacao/', include('avaliacao.urls')),
     path('', views.index, name='index'),
     path('accounts/login/', auth_views.LoginView.as_view(template_name='registration/login.html'), name='login'),
